@@ -1,0 +1,63 @@
+
+
+# Documentação: Caixa da Lanchonete
+
+A classe `CaixaDaLanchonete` é responsável por simular um sistema de caixa para uma lanchonete. Ela permite calcular o valor total de uma compra com base nos itens selecionados e na forma de pagamento escolhida, além de atualizar o valor total na interface.
+
+## Métodos
+
+### Construtor
+
+O construtor da classe `CaixaDaLanchonete` inicializa os itens do cardápio e as formas de pagamento disponíveis.
+
+```javascript
+constructor()
+```
+
+### calcularValorDaCompra
+
+Este método calcula o valor total de uma compra com base nos itens selecionados e na forma de pagamento escolhida.
+
+```javascript
+calcularValorDaCompra(formaDePagamento, itens)
+```
+
+- `formaDePagamento`: A forma de pagamento escolhida (string). Pode ser 'dinheiro', 'debito' ou 'credito'.
+- `itens`: Um array de strings representando os itens selecionados e suas quantidades. Cada string segue o formato 'codigo,quantidade'.
+
+### atualizarTotal
+
+Este método atualiza o valor total na interface HTML.
+
+```javascript
+atualizarTotal(valorTotal)
+```
+
+- `valorTotal`: O valor total da compra a ser exibido na interface.
+
+## Eventos
+
+O código também define um evento para lidar com o envio do formulário de pedidos na página.
+
+```javascript
+document.addEventListener('DOMContentLoaded', callback)
+```
+
+O callback associado a esse evento cria uma instância da classe `CaixaDaLanchonete`, vincula o formulário de pedidos a um evento de envio e atualiza o valor total na interface com base nos itens selecionados.
+
+## Exemplos de Uso
+
+O código inclui exemplos de cálculos de valor de compra usando a instância da classe `CaixaDaLanchonete`.
+
+```javascript
+const caixa = new CaixaDaLanchonete();
+console.log(caixa.calcularValorDaCompra('debito', ['doce1,17']));
+console.log(caixa.calcularValorDaCompra('credito', ['doce1,4', 'salgado,1', 'cafe,2']));
+console.log(caixa.calcularValorDaCompra('debito', ['doce1,10']));
+```
+
+Estes exemplos demonstram como calcular o valor total de compras com diferentes combinações de itens e formas de pagamento.
+
+---
+
+Esta documentação oferece uma visão geral dos principais elementos e funcionalidades do código. Você pode adaptar e expandir essa documentação conforme necessário para atender aos requisitos do seu projeto.
